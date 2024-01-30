@@ -14,7 +14,24 @@
 
 .slider_container {
   display: flex;
+  position: relative;
   height: 600px;
+}
+
+.description_container {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  color: white;
+}
+
+.img_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.img_description {
+  width: 50%;
 }
 
 .slider_container > img {
@@ -23,6 +40,8 @@
 
   object-fit: cover;
   object-position: center;
+
+  filter: brightness(80%);
 }
 
 .thumb_container {

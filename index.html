@@ -44,13 +44,22 @@
     <!-- app container declaration -->
     <div id="app">
       <div class="container" id="main_container">
-        <div class="slider_container">
+        <div
+          @mouseover="stopAutoplay()"
+          @mouseleave="startAutoplay()"
+          class="slider_container"
+        >
           <img
             :src="`./img/${slides[activeSlide].image}`"
             :alt="slides[activeSlide
             ].title"
             class="img-fluid"
           />
+
+          <div class="description_container">
+            <span class="img_title">{{slides[activeSlide].title}}</span>
+            <p class="img_description">{{slides[activeSlide].text}}</p>
+          </div>
 
           <div class="thumb_container">
             <img

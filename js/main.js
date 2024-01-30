@@ -61,6 +61,10 @@ createApp({
         this.goNext();
       }, 3000);
     },
+
+    stopAutoplay() {
+      clearInterval(this.autoplay);
+    },
   },
 
   mounted() {

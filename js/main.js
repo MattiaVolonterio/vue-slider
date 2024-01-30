@@ -31,6 +31,7 @@ createApp({
         },
       ],
       activeSlide: 0,
+      autoplay: false,
     };
   },
 
@@ -54,5 +55,15 @@ createApp({
     goToSlide(slideIndex) {
       this.activeSlide = slideIndex;
     },
+
+    startAutoplay() {
+      this.autoplay = setInterval(() => {
+        this.goNext();
+      }, 3000);
+    },
+  },
+
+  mounted() {
+    this.startAutoplay();
   },
 }).mount("#app");
